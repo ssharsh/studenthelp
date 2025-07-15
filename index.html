@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI Tools Hub</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>AI Tools Hub</h1>
+        <form action="/process" method="post">
+            <label for="tool">Select a tool:</label>
+            <select name="tool" id="tool">
+                <option value="resume">Resume Fixer</option>
+                <option value="email">Email Tone Improver</option>
+                <option value="contract">Contract Analyzer</option>
+            </select>
+
+            <textarea name="user_input" rows="10" cols="80" placeholder="Paste your text here..." required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
